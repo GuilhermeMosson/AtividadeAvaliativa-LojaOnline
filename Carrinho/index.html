@@ -10,14 +10,20 @@
 </head>
 <body>
     <header class="btn-group" role="group" aria-label="Basic outlined example">
-        <button onclick="window.location.href='../Menu/index.html'" type="button" class="btn btn-black">Menu</button>
-        <button onclick="window.location.href='../Loja/index.html'" type="button" class="btn btn-black active">loja</button>
-        <button onclick="window.location.href='../Carrinho/index.html'" type="button" class="btn btn-black">Carrinho</button>
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button onclick="window.location.href='../Menu/index.html'" type="button" class="btn btn-primary">Menu</button>
+            <button onclick="window.location.href='../Loja/index.html'" type="button" class="btn btn-primary">loja</button>
+            <button onclick="window.location.href='../Carrinho/index.html'" type="button" class="btn btn-primary active">Carrinho</button>
+        </div>
     </header>
     
     <main>
         <section>
             <h1>Seu carrinho</h1>
+            <span class="badge bg-secondary" id="produto01"></span>
+            <span class="badge bg-secondary" id="produto02"></span>
+            <span class="badge bg-secondary" id="produto03"></span>
+            <span class="badge bg-secondary" id="produto04"></span>
         </section>
     </main>
 </body>

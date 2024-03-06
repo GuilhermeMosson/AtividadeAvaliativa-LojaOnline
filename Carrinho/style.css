@@ -22,3 +22,7 @@ body{
     z-index: 999;
     justify-content: center;    
 }
+
+main{
+    margin-top: 10vh;
+}
