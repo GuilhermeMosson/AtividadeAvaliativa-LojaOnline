@@ -9,14 +9,52 @@
     <title>Loja</title>
 </head>
 <body>
-    <div class="btn-group" role="group" aria-label="Basic outlined example">
+    <header class="btn-group" role="group" aria-label="Basic outlined example">
         <button onclick="window.location.href='../Menu/index.html'" type="button" class="btn btn-outline-primary">Menu</button>
-        <button onclick="window.location.href='../Loja/index.html'" type="button" class="btn btn-outline-primary">loja</button>
+        <button onclick="window.location.href='../Loja/index.html'" type="button" class="btn btn-outline-primary active">loja</button>
         <button onclick="window.location.href='../Carrinho/index.html'" type="button" class="btn btn-outline-primary">Carrinho</button>
-    </div>
+    </header>
     <main>
         <section>
-            <h1>Nossos Produtos</h1>
+            <div class="nav_itens">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Smartphones</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="#">Notebooks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">TVs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Periféricos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Fones de ouvido</a></li>
+                            <li><a class="dropdown-item" href="#">Teclados</a></li>
+                            <li><a class="dropdown-item" href="#">Mouses</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="smartphones">
+                <h2>Smartphones</h2>
+            </div>
+            <div class="notebooks">
+                <h2>Notebooks</h2>
+            </div>
+            <div class="tvs">
+                <h2>TVs</h2>
+            </div>
+            <div class="foneDeOuvido">
+                <h2>Fones de ouvido</h2>
+            </div>
+            <div class="teclados">
+                <h2>Teclados</h2>
+            </div>
+            <div class="mouses">
+                <h2>Mouse</h2>
+            </div>
         </section>
     </main>
 </body>
