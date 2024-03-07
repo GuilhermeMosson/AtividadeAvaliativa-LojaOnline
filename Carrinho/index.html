@@ -11,20 +11,24 @@
 <body>
     <header class="btn-group" role="group" aria-label="Basic outlined example">
         <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <button onclick="window.location.href='../Menu/index.html'" type="button" class="btn btn-primary">Menu</button>
-            <button onclick="window.location.href='../Loja/index.html'" type="button" class="btn btn-primary">loja</button>
-            <button onclick="window.location.href='../Carrinho/index.html'" type="button" class="btn btn-primary active">Carrinho</button>
+            <button onclick="window.location.href='../Menu/index.html'" type="button" class="btn btn" id="buttonHeader">Menu</button>
+            <button onclick="window.location.href='../Loja/index.html'" type="button" class="btn btn active" id="buttonHeader">loja</button>
+            <button onclick="window.location.href='../Carrinho/index.html'" type="button" class="btn btn" id="buttonHeader">Carrinho</button>
         </div>
     </header>
     
     <main>
         <section>
-            <h1>Seu carrinho</h1>
-            <span class="badge bg-secondary" id="produto01"></span>
-            <span class="badge bg-secondary" id="produto02"></span>
-            <span class="badge bg-secondary" id="produto03"></span>
-            <span class="badge bg-secondary" id="produto04"></span>
+            <h1>Seu carrinho de compras</h1>
+            <ul id="carrinho">
+                <li>Seus Produtos:</li>
+            </ul>
+            <button type="button" onclick="calculartotal()">Confirmar total</button>
+            <p>Total: <span id="total"></span></p>
+            <button type="button" onclick="limpar()">Limpar carrinho</button>
         </section>
     </main>
 </body>
 </html>
+<script src="script.js"></script>
+

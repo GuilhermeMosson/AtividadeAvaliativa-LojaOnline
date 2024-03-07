@@ -9,24 +9,30 @@ html{
 
 header{
     position: fixed;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 10vh;
     top: 0;
     z-index: 999;
     background-color: rgb(224, 212, 212);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .btn-group{
     width: 100%;
-    height: 7vh; 
+    height: 6.5vh; 
+    border-bottom: 1.5px solid rgba(52, 51, 51, 0.337);
 }
 
+#buttonHeader:hover{
+    font-weight: 750;
+    color: blue;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    
+}
 
 body{
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +43,12 @@ body{
     background-color: rgb(228, 228, 228);
 }
 
+main{
+    margin-top: 5vh;
+}
+
 h2{
+    display: none;
     font-size: 2rem;
     font-weight: 800;
 }
@@ -59,8 +70,12 @@ ul{
     gap: 3vh;
 }
 
+#buttonHeader{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
 .nav-link{
-    width: 150px;
     color: black;
 }
 
@@ -69,19 +84,17 @@ ul{
     flex-direction: row;
     align-items: center;
     gap: 3vw;
-    margin-bottom: 5vh;
-    padding-top: 14vh;
+    margin-bottom: 15vh;
+    padding-top: 15vh;
 }
 
 .card{
-    width: calc(50px + 10vw);
-    height: calc(50px + 40vh);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 img{
-    width: calc(30px + 5vw);
-    height: calc(30px + 12vw);
+    width: 100%;
+    height: 40vh;
 }
 
 .btn-info{
@@ -91,23 +104,42 @@ img{
 
 @media(width <= 600px){
     body{
+        padding: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 15px;
+        gap: 3vh;
     }
 
-    .nav_itens{
-        position: relative;
-        margin-top: 5vh;
-        width: 100%;
-        right: 0vw;
-        border: 2px solid blue;
-        border-radius: 10px;
-    }
+    main{
+        margin-top: 8vh;
+    }    
 
     .nav-link{
-        width: auto;
+        display: none;
+    }
+
+    h2{
+        display:contents;
+    }
+
+    .wrap_cards{
+        width: 90vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 8vh;
+        margin-bottom: 8vh;
+        padding-top: 0;
+    }
+
+    .card{
+        height: 50vh;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    
+    img{
+        width: 30vh;
+        height: 35vh;
     }
 }

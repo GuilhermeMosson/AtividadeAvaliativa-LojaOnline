@@ -13,9 +13,9 @@
 <body>
     <header>
         <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <button onclick="window.location.href='../Menu/index.html'" type="button" class="btn btn-primary">Menu</button>
-            <button onclick="window.location.href='../Loja/index.html'" type="button" class="btn btn-primary active">loja</button>
-            <button onclick="window.location.href='../Carrinho/index.html'" type="button" class="btn btn-primary">Carrinho</button>
+            <button onclick="window.location.href='../Menu/index.html'" type="button" class="btn btn" id="buttonHeader">Menu</button>
+            <button onclick="window.location.href='../Loja/index.html'" type="button" class="btn btn active" id="buttonHeader">loja</button>
+            <button onclick="window.location.href='../Carrinho/index.html'" type="button" class="btn btn" id="buttonHeader">Carrinho</button>
         </div>
         <div class="nav_itens">
             <ul class="nav nav-pills">
@@ -41,14 +41,16 @@
     </header>
     <main>
         <section>
+            <a href="../Carrinho/index.html">Carrinho</a>
             <div class="produtos">
                 <div class="wrap_cards" id="smartphones">
+                    <h2>Smartphones</h2>
                     <div class="card" style="width: 18rem;">
                         <img src="https://images9.kabum.com.br/produtos/fotos/129939/smartphone-asus-gamer-rog-phone-3-128gb-64mp-tela-6-59-preto-zs661ks-6a033br_1603136675_g.jpg" class="card-img-top" alt="celular">
                         <div class="card-body">
                             <h5 class="card-title">Smartphone 1</h5>
                             <p class="card-text">R$: 2699.90</p>
-                            <button href="#" class="btn btn-info" onclick="irCarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Smartphone 1', 2699.9)">Comprar</button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -56,7 +58,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Smartphone 2</h5>
                             <p class="card-text">R$: 4560.50</p>
-                            <button href="#" class="btn btn-info" onclick="irCcarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Smartphone 2', 4560.5)">Comprar</button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -64,17 +66,18 @@
                         <div class="card-body">
                             <h5 class="card-title">Smartphone 3</h5>
                             <p class="card-text">R$: 1799.60</p>
-                            <button href="#" class="btn btn-info" onclick="irCcarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Smartphone 3', 1799.6)">Comprar</button>
                         </div>
                     </div>
                 </div>
                 <div class="wrap_cards" id="notebooks">
+                    <h2>Notebooks</h2>
                     <div class="card" style="width: 18rem;">
                         <img src="https://imgs.casasbahia.com.br/55051534/1g.jpg" class="card-img-top" alt="Laptop">
                         <div class="card-body">
                             <h5 class="card-title">Notebook 1</h5>
                             <p class="card-text">R$: 3100.10</p>
-                            <button href="#" class="btn btn-info" onclick="irCcarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Notebook 1', 3100.1)">Comprar</button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -82,7 +85,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Notebook 2</h5>
                             <p class="card-text">R$: 8790.60</p>
-                            <button href="#" class="btn btn-info" onclick="irCcarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Notebook 2', 8790.6)">Comprar</button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -90,18 +93,19 @@
                         <div class="card-body">
                             <h5 class="card-title">Notebook 3</h5>
                             <p class="card-text">R$: 5600.00</p>
-                            <button href="#" class="btn btn-info" onclick="irCcarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Notebook 3', 5600)">Comprar</button>
                         </div>
                     </div>
                 </div>    
                 
                 <div class="wrap_cards" id="tvs">
+                    <h2>Tvs</h2>
                     <div class="card" style="width: 18rem;">
                         <img src="https://imgs.extra.com.br/55062339/1g.jpg" class="card-img-top" alt="tv">
                         <div class="card-body">
                             <h5 class="card-title">Tv 1</h5>
                             <p class="card-text">R$: 3099.99</p>
-                            <button href="#" class="btn btn-info" onclick="irCcarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Tv 1', 3099.99)">Comprar</button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -109,7 +113,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Tv 2</h5>
                             <p class="card-text">R$: 11250.00</p>
-                            <button href="#" class="btn btn-info" onclick="irCcarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Tv 2', 11250)">Comprar</button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -117,40 +121,43 @@
                         <div class="card-body">
                             <h5 class="card-title">Tv 3</h5>
                             <p class="card-text">R$: 6800.20</p>
-                            <button href="#" class="btn btn-info" onclick="irCcarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Tv 3', 6800.2)">Comprar</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="wrap_cards" id="fones">
+                    <h2>Fones de ouvido</h2>
                     <div class="card" style="width: 18rem;">
                         <img src="https://images-americanas.b2w.io/produtos/5109931538/imagens/fone-headset-gamer-para-pc-celular-e-videogame-k5/5109931571_1_large.jpg" class="card-img-top" alt="fone">
                         <div class="card-body">
                             <h5 class="card-title">Fone de ouvido</h5>
                             <p class="card-text">R$: 799.99</p>
-                            <button href="#" class="btn btn-info" onclick="irCcarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Fone', 799.99)">Comprar</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="wrap_cards" id="teclados">
+                    <h2>Teclados</h2>
                     <div class="card" style="width: 18rem;">
                         <img src="https://cdn.awsli.com.br/600x1000/2144/2144735/produto/184198955919b8cdb0d.jpg" class="card-img-top" alt="teclado">
                         <div class="card-body">
                             <h5 class="card-title">Teclado</h5>
                             <p class="card-text">300.00</p>
-                            <button href="#" class="btn btn-info" onclick="irCcarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Teclado', 300)">Comprar</button>
                         </div>
                     </div>
                 </div>
                 
                 <div class="wrap_cards" id="mouse">
+                    <h2>Mouse</h2>
                     <div class="card" style="width: 18rem;">
                         <img src="https://www.mymax.ind.br/wp-content/uploads/2019/10/010046_1.jpg" class="card-img-top" alt="mouse">
                         <div class="card-body">
                             <h5 class="card-title">Mouse</h5>
                             <p class="card-text">R$: 120.80</p>
-                            <button href="#" class="btn btn-info" onclick="irCcarrinho()">Comprar</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Mouse', 120.8)">Comprar</button>
                         </div>
                     </div>
                 </div>
@@ -159,3 +166,4 @@
     </main>
 </body>
 </html>
+<script src="script.js"></script>
