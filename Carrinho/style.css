@@ -15,21 +15,29 @@ header{
     position: fixed;
     flex-direction: column;
     width: 100%;
+    height: auto;
     top: 0;
     z-index: 999;
     background-color: rgb(224, 212, 212);
-    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .btn-group{
     width: 100%;
     height: 6.5vh; 
+    border-bottom: 1.5px solid rgba(52, 51, 51, 0.337);
+}
+
+#buttonHeader{
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 100%;
 }
 
 #buttonHeader:hover{
     font-weight: 750;
     color: blue;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     
 }
 
@@ -47,5 +55,37 @@ body{
 }
 
 main{
-    margin-top: 10vh;
+    margin-top: 5vh;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 2rem;
+}
+ul{
+    text-decoration: none;
+    margin-bottom: 10vh;
+}
+
+#butLimpar{
+    margin-top: 30vh;
+    width: 150px;
+}
+
+@media(width <= 600px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        gap: 3vh;
+    };
 }

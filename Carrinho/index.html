@@ -20,12 +20,15 @@
     <main>
         <section>
             <h1>Seu carrinho de compras</h1>
-            <ul id="carrinho">
-                <li>Seus Produtos:</li>
-            </ul>
-            <button type="button" onclick="calculartotal()">Confirmar total</button>
-            <p>Total: <span id="total"></span></p>
-            <button type="button" onclick="limpar()">Limpar carrinho</button>
+            <p>Seus itens apareceram abaixo</p>
+            <div class="wrap_ul">
+                <ul id="carrinho">
+
+                </ul>
+            </div>
+            <button type="button" class="btn btn-success" onclick="calculartotal()">Confirmar total</button>
+            <p><span id="total"></span></p>
+            <button type="button" class="btn btn-outline-dark" onclick="limpar()" id="butLimpar">Limpar</button>
         </section>
     </main>
 </body>

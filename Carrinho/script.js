@@ -1,10 +1,3 @@
-function irCarrinho(nome, preco){
-    let carrinhoItens = JSON.parse(localStorage.getItem('carrinho')) || [];
-    carrinhoItens.push = ({nome, preco});
-    localStorage.setItem('carrinho', JSON.stringify(carrinhoItens));
-    console.log(nome, preco)
-}
-
 function exibirItensNoCarrinho() {
     const carrinhoItens = JSON.parse(localStorage.getItem('carrinho')) || [];
     const carrinho = document.getElementById("carrinho");
@@ -13,7 +6,7 @@ function exibirItensNoCarrinho() {
     // Adiciona os itens do carrinho ao elemento 'carrinho'
     carrinhoItens.forEach(item => {
         const novoItem = document.createElement('li');
-        novoItem.textContent = `${item.nome} - ${item.preco}`;
+        novoItem.textContent = `${item.nome}  -  R$${item.preco}`;
         carrinho.appendChild(novoItem);
       });
     }  
@@ -22,7 +15,7 @@ function calculartotal(){
     const carrinhoItens = JSON.parse(localStorage.getItem('carrinho')) || [];
     const total = carrinhoItens.reduce((acc, item) => acc + item.preco, 0);
     const totalElemento = document.getElementById('total');
-    totalElemento.textContent = `R$${total}`;
+    totalElemento.textContent = `Total do carrinho R$${total}`;
 }
 
 function limpar(){

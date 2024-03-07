@@ -3,5 +3,13 @@ function irCarrinho(nome, preco) {
     carrinhoItens.push({ nome, preco }); 
     // Armazena os itens atualizados de volta no armazenamento local
     localStorage.setItem('carrinho', JSON.stringify(carrinhoItens));
-    alert("Seu item já foi adicionado ao carrinho! Olhe seu carrinho para ver seus itens!!")
+    show();
+}
+
+function show(){
+    document.getElementById('idMsg').style.display="flex";
+}
+
+function fechar(){
+    document.getElementById("idMsg").style.display="none"
 }

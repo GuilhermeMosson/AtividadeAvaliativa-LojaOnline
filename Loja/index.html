@@ -41,7 +41,6 @@
     </header>
     <main>
         <section>
-            <a href="../Carrinho/index.html">Carrinho</a>
             <div class="produtos">
                 <div class="wrap_cards" id="smartphones">
                     <h2>Smartphones</h2>
@@ -163,6 +162,12 @@
                 </div>
             </div>
         </section>
+        <div class="msgProduto" id="idMsg">
+            <p>Seu produto já foi adicionado ao carrinho!</p>
+            <p>Veja seus itens no carrinho ou continue navegando!</p>
+            <button type="button" class="btn btn-success" onclick="fechar()" id="butMsg">Navegar mais</button>
+            <button type="button" class="btn btn-warning" onclick="window.location.href='../Carrinho/index.html'" id="butMsg">Meu carriho</button>
+        </div>
     </main>
 </body>
 </html>
