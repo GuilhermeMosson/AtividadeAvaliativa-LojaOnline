@@ -19,16 +19,20 @@
     
     <main>
         <section>
-            <h1>Seu carrinho de compras</h1>
-            <p>Seus itens apareceram abaixo</p>
-            <div class="wrap_ul">
-                <ul id="carrinho">
+            <div class="carrinhoCompras">
+                <h1>Seu carrinho de compras</h1>
+                <p>Seus itens apareceram abaixo</p>
+                <div class="wrap_ul">
+                    <ul id="carrinho">
 
-                </ul>
+                    </ul>
+                </div>
             </div>
-            <p><span id="total"></span></p>
-            <button type="button" class="btn btn-success" onclick="enviarWats()">Enviar pedido</button>
-            <button type="button" class="btn btn-outline-dark" onclick="limpar()" id="butLimpar">Limpar</button>
+            <div class="finalPedido" id="finalizar">
+                <p><span id="total"></span></p>
+                <button type="button" class="btn btn-success" onclick="enviarWats()" id="butTotal">Enviar pedido</button>
+                <button type="button" class="btn btn-outline-dark" onclick="limpar()" id="butLimpar">Limpar carrinho</button>
+            </div>
         </section>
     </main>
 </body>

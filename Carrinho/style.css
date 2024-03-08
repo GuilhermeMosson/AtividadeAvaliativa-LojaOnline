@@ -46,7 +46,7 @@ body{
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-family: "Nunito Sans", sans-serif;
@@ -54,38 +54,129 @@ body{
     background-color: rgb(228, 228, 228);
 }
 
-main{
-    margin-top: 5vh;
+section{
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10vh;
 }
 
-section{
+.carrinhoCompras{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     gap: 3vh;
 }
 
 h1{
-    font-weight: 700;
-    font-size: 2rem;
+    font-weight: 900;
+    font-size: 2.4rem;
 }
+
+p{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
 ul{
+    padding: 5px;
+    list-style-type: none;
     text-decoration: none;
     margin-bottom: 10vh;
+    border: 2px solid black;
+    gap: 4vh;
+    width: 20vw;
+    text-align: center;
+}
+
+li{
+    padding: 5px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border: 1.5px solid black;
+    height: 60px;
+    justify-content: center;
+
+}
+
+.finalPedido{
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 3vh;
+    margin-left: 20vh;
+}
+
+#butTotal{
+    width: 100%;
 }
 
 #butLimpar{
-    margin-top: 30vh;
-    width: 150px;
+    width: 100%;
+    margin-top: 20vh;
 }
 
-@media(width <= 600px){
+@media(width <= 800px){
     body{
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: center;
         justify-content: center;
         gap: 3vh;
-    };
+        padding: 10px;
+    }
+
+    section{
+        margin-top: 3vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3vh;
+    }
+
+    .carrinhoCompras{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2vh;
+    }
+
+    ul{
+        padding: 5px;
+        list-style-type: none;
+        text-decoration: none;
+        border: 2px solid black;
+        gap: 4vh;
+        width: 80vw;
+        text-align: center;
+    }
+
+    .finalPedido{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2vh;
+        margin-left: 0;
+    }
+
+    p{
+        font-size: 1.4rem;
+        font-weight: 700;
+    }    
+
+    #butTotal{
+        width: 100%;
+        height: 5vh;
+    }
+    
+    #butLimpar{
+        width: 100%;
+        margin-top: 10vh;
+        height: 5vh;
+    }
 }
