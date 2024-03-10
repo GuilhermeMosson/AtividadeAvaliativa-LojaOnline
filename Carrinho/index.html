@@ -9,7 +9,7 @@
     <title>Carrinho</title>
 </head>
 <body>
-    <header class="btn-group" role="group" aria-label="Basic outlined example">
+    <header>
         <div class="btn-group" role="group" aria-label="Basic outlined example">
             <button onclick="window.location.href='../Menu/index.html'" type="button" class="btn btn" id="buttonHeader">Menu</button>
             <button onclick="window.location.href='../Loja/index.html'" type="button" class="btn btn active" id="buttonHeader">loja</button>
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="finalPedido" id="finalizar">
-                <p><span id="total"></span></p>
+                <p id="total"></p>
                 <button type="button" class="btn btn-success" onclick="enviarWats()" id="butTotal">Enviar pedido</button>
                 <button type="button" class="btn btn-outline-dark" onclick="limpar()" id="butLimpar">Limpar carrinho</button>
             </div>

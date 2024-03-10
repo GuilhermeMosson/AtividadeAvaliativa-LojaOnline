@@ -15,23 +15,21 @@ header{
     position: fixed;
     flex-direction: column;
     width: 100%;
-    height: auto;
     top: 0;
     z-index: 999;
-    background-color: rgb(224, 212, 212);
+    background-color: rgb(142, 180, 184);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .btn-group{
     width: 100%;
-    height: 6.5vh; 
+    height: 7vh; 
     border-bottom: 1.5px solid rgba(52, 51, 51, 0.337);
 }
 
 #buttonHeader{
     font-size: 1.2rem;
     font-weight: 700;
-    height: 100%;
 }
 
 #buttonHeader:hover{
@@ -46,7 +44,7 @@ body{
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     justify-content: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-family: "Nunito Sans", sans-serif;
@@ -55,7 +53,7 @@ body{
 }
 
 section{
-    margin-top: 15vh;
+    margin-top: 20vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -82,24 +80,23 @@ p{
 }
 
 ul{
-    padding: 5px;
+    padding: 0px 25px 0px 25px;
     list-style-type: none;
     text-decoration: none;
-    margin-bottom: 10vh;
-    border: 2px solid black;
-    gap: 4vh;
-    width: 20vw;
+    border: 2px solid rgb(73, 73, 73);
+    border-radius: 10px;
+    width: 100%;
     text-align: center;
 }
 
 li{
-    padding: 5px;
+    margin-top: 2vh;
     font-size: 1.4rem;
     font-weight: 500;
-    border: 1.5px solid black;
+    border-bottom: 1.5px solid rgb(41, 41, 41);
     height: 60px;
     justify-content: center;
-
+    color: darkblue;
 }
 
 .finalPedido{
@@ -107,7 +104,9 @@ li{
     align-items: left;
     justify-content: center;
     gap: 3vh;
-    margin-left: 20vh;
+    border-left: 2px solid rgb(63, 63, 63);
+    padding-left: 10vh;
+    margin-left: 3vh;
 }
 
 #butTotal{
@@ -116,21 +115,28 @@ li{
 
 #butLimpar{
     width: 100%;
-    margin-top: 20vh;
+    margin-top: 15vh;
 }
 
-@media(width <= 800px){
+@media(width <= 900px){
     body{
+        overflow-x: hidden;
+        overflow-y: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 3vh;
-        padding: 10px;
+        padding: 15px;
+    }
+
+    #buttonHeader{
+        font-size: 1.4rem;
+        font-weight: 700;
     }
 
     section{
-        margin-top: 3vh;
+        margin-top: 7vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -147,20 +153,32 @@ li{
     }
 
     ul{
-        padding: 5px;
+        padding: 0px 25px 0px 25px;
         list-style-type: none;
         text-decoration: none;
-        border: 2px solid black;
-        gap: 4vh;
-        width: 80vw;
+        border: 2px solid rgb(73, 73, 73);
+        width: 100%;
         text-align: center;
+    }
+    
+    li{
+        margin-top: 2vh;
+        font-size: 1.5rem;
+        font-weight: 500;
+        border-bottom: 1.5px solid rgb(41, 41, 41);
+        width: 100%;
+        height: 70px;
+        justify-content: center;
+        color: darkblue;
     }
 
     .finalPedido{
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        text-align: center;
         gap: 2vh;
+        border-left: none;
+        padding: 15px;
         margin-left: 0;
     }
 
@@ -170,13 +188,17 @@ li{
     }    
 
     #butTotal{
-        width: 100%;
-        height: 5vh;
+        font-size: 1.4rem;
+        font-weight: 700;
+        width: 90%;
+        height: 6.5vh;
     }
     
     #butLimpar{
-        width: 100%;
+        font-size: 1.4rem;
+        font-weight: 700;
+        width: 90%;
         margin-top: 10vh;
-        height: 5vh;
+        height: 6.5vh;
     }
 }

@@ -16,6 +16,7 @@ body{
     background-attachment: fixed;
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
+    transition: all 1s linear;
 }
 
 
@@ -109,24 +110,14 @@ p:hover{
     transition: all 200ms linear;
 }
 
-.carousel-inner{
-    width: 100%;
-    height: auto;
-    background-color: slategrey;
-}
-
-.carousel-item{
-    width: auto;
-    height: auto;
-}
-
-@media(width <= 600px){
+@media(width <= 700px){
     body{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 15px;
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20220912/pngtree-modern-electronics-store-displaying-smartphones-in-showcase-technology-showcase-mall-photo-image_48561284.jpg);
     }
 
     .wrap_imgLogo{
