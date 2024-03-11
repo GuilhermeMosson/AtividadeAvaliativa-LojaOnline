@@ -109,13 +109,16 @@ li{
     margin-left: 3vh;
 }
 
+
 #butTotal{
     width: 100%;
+    display: none;
 }
 
 #butLimpar{
     width: 100%;
     margin-top: 15vh;
+    display: none;
 }
 
 @media(width <= 900px){
