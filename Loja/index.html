@@ -41,6 +41,7 @@
                     </ul>
                 </li>
             </ul>
+            <a class="butContato" href="#entreContato">Entre em contato</a>
         </div>
     </header>
 
@@ -335,6 +336,19 @@
                     </div>
                 </div>
             </div>
+
+            <div id="entreContato">
+                <p style="font-size: 1.6rem; font-weight: 700;">Entre em contato</p>
+                <div class="mb-3" id="contatoDiv">
+                    <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Seu nome">
+                </div>
+                <div class="mb-3" id="contatoDiv">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                </div>
+                <button type="button" class="btn btn-success" onclick="enviarMsg()" id="enviarMsg">Enviar mensagem</button>
+            </div>  
         </section>
         <div class="msgProduto" id="idMsg">
             <p class="MsgP">Seu produto foi adicionado ao carrinho!</p>

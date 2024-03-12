@@ -14,7 +14,21 @@ function exibirItensNoCarrinho() {
       totalElemento.textContent = `Total do carrinho: R$${total}`;
     }  
 
+function confirmarDados(){
+    document.getElementById('idInput').style.display='flex';
+}
+
 function enviarWats(){
+    var nome = document.getElementById('floatingName').value;
+    var endereco = document.getElementById('floatingAdress').value;
+
+    if(!nome || !endereco){
+        alert('Preencha todas as lacunas corretamente para continuar!!');
+        document.getElementById('floatingName').style.border = '2px solid lightpink';
+        document.getElementById('floatingAdress').style.border = '2px solid lightpink';
+        return;
+    }
+
     let mensagem = 'Produtos no carrinho: \n';
     const carrinhoItens = JSON.parse(localStorage.getItem('carrinho')) || [];
     const total = document.getElementById('total').innerHTML;
@@ -29,8 +43,16 @@ function enviarWats(){
     mensagem += `${total} | Pedido feito em ${dt}`;
         
     var numeroTel = "5541999999999"; /*Lembrar de colocar o nº certo*/
-    var linkWhatsApp = "https://wa.me/" + numeroTel + "?text=" + mensagem;
+    var linkWhatsApp = "https://wa.me/" + numeroTel + "?text=" + "Pedido de " + nome + ": " + mensagem + " | Será entregue em " + endereco;
     window.open(linkWhatsApp, "_blank");/*Abre o zap em outra janela*/;
+
+    document.getElementById('idInput').style.display='none';
+}
+
+function fechar(){
+    document.getElementById("idInput").style.display='none';
+    document.getElementById('floatingName').value = '';
+    document.getElementById('floatingAdress').value = '';
 }
 
 function limpar(){
@@ -46,7 +68,6 @@ function formatarData(item){
         day: "numeric",
         hour: "numeric",
         minute: "numeric",
-        second: "numeric",
     }
 
     return item.toLocaleString("pt-BR", options)

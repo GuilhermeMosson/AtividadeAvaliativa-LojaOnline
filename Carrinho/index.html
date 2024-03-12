@@ -30,24 +30,20 @@
                 <p id="total"></p>
             </div>
             <div class="finalPedido" id="finalizar">
-                <div class="wrapInput">
-                    <div class="input-group">
-                        <span class="input-group-text">Seu nome e sobrenome</span>
-                        <input type="text" aria-label="First name" class="form-control">
-                        <input type="text" aria-label="Last name" class="form-control">
+                <div class="wrapInput" id="idInput">
+                    <p>Preencha com seus dados para realizar seu <i>pedido</i></p>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingName" placeholder="Seu nome">
+                        <label for="floatingName">Seu nome</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Endereço de Email</label>
+                        <input type="text" class="form-control" id="floatingAdress" placeholder="Seu endereço">
+                        <label for="floatingAdress">Seu endereço</label>
                     </div>
-                    <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Senha</label>
-                    </div>
-                    <button type="button" class="btn btn-primary" onclick="confirmarDados()" id="confDados">Confirmar dados</button>
+                <button type="button" class="btn btn-success" onclick="enviarWats()" id="butEnviar">Enviar pedido</button>
+                <button type="button" class="btn btn-outline-danger" onclick="fechar()" id="butFechar">Cancelar</button>
                 </div>
-
-                <button type="button" class="btn btn-success" onclick="enviarWats()" id="butTotal">Enviar pedido</button>
+                <button type="button" class="btn btn-success" onclick="confirmarDados()" id="butTotal">Confirmar pedido</button>
                 <button type="button" class="btn btn-outline-dark" onclick="limpar()" id="butLimpar">Limpar carrinho</button>
             </div>
         </section>

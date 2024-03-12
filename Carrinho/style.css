@@ -109,17 +109,47 @@ li{
     margin-left: 3vh;
 }
 
-
 #butTotal{
     width: 100%;
-    display: none;
 }
 
 #butLimpar{
     width: 100%;
     margin-top: 15vh;
-    display: none;
 }
+
+#butEnviar{
+    width: 100%;
+}
+
+#butFechar{
+    width: 100%;
+}
+
+.wrapInput{
+    display: none;
+    flex-direction: column;
+    align-items: left;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    gap: 2vh;
+    background-color: rgb(240, 238, 235);
+    border: 3px solid rgb(85, 79, 61);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    text-align: center;
+    width: 60vw;
+    height: auto;
+}
+
+input{
+    width: 100%;
+    font-size: 1.5rem;
+}
+
 
 @media(width <= 900px){
     body{
@@ -191,17 +221,49 @@ li{
     }    
 
     #butTotal{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 700;
         width: 90%;
         height: 6.5vh;
     }
     
     #butLimpar{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 700;
         width: 90%;
         margin-top: 10vh;
         height: 6.5vh;
+    }
+
+    #butEnviar{
+        width: 100%;
+    }
+    
+    #butFechar{
+        width: 100%;
+    }
+
+    .wrapInput{
+        display: none;
+        flex-direction: column;
+        align-items: left;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        gap: 2vh;
+        background-color: rgb(240, 238, 235);
+        border: 3px solid rgb(85, 79, 61);
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        text-align: center;
+        width: 80vw;
+        height: auto;
+    }
+    
+    input{
+        width: 12%;
+        font-size: 1.5rem;
     }
 }
