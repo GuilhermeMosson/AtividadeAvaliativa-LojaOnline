@@ -73,10 +73,10 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     background-color: rgb(228, 228, 228);
@@ -113,7 +113,7 @@ h5{
 .carousel.slide{
     align-items: center;
     width: 100vw;
-    height: 75vh;
+    height: 38vw;
 }
 
 .carousel-item{
@@ -123,8 +123,8 @@ h5{
 }
 
 #imgCarrosseu{
-    width: 100%;
-    height: 75vh;
+    width: 100vw;
+    height: 38vw;
 }
 
 .produtos{
@@ -159,6 +159,7 @@ h5{
 #imgProduto:hover{
     transform: scale(1.05);
     transition: all 300ms linear;
+    cursor: crosshair;
 
 }
 
@@ -212,6 +213,7 @@ h5{
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     text-align: center;
     font-size: 1.4rem;
+    pointer-events: none; /* torna o elemento não interativo */
 }
 
 
@@ -223,7 +225,7 @@ h5{
     width: 70%;
 }
 
-@media(width <= 900px){
+@media(width <= 1000px){
     body{
         overflow-x: hidden;
         overflow-y: auto;
@@ -241,8 +243,14 @@ h5{
         font-weight: 700;
     }
 
-    main{
-        margin-top: 3vh;
+    section{
+        margin-top: 12vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3vh;
     }   
     
     .carrouseuDiv{

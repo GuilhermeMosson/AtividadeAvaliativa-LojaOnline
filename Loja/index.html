@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Loja</title>
 </head>
 <body>
     <header>
         <div class="btn-group" role="group" aria-label="Basic outlined example">
             <button onclick="window.location.href='../Menu/index.html'" type="button" class="btn btn" id="buttonHeader">Menu</button>
-            <button onclick="window.location.href='../Loja/index.html'" type="button" class="btn btn active" id="buttonHeader">loja</button>
-            <button onclick="window.location.href='../Carrinho/index.html'" type="button" class="btn btn" id="buttonHeader">Carrinho</button>
+            <button onclick="window.location.href='../Loja/index.html'" type="button" class="btn btn active" id="buttonHeader"><span class="material-icons" style="font-size: 1.5rem;">shopping_bag</span> Loja</button>
+            <button onclick="window.location.href='../Carrinho/index.html'" type="button" class="btn btn" id="buttonHeader"><span class="material-icons" style="font-size: 2rem;">shopping_cart</span></button>
         </div>
         <div class="nav_itens">
             <ul class="nav nav-pills">
@@ -41,7 +42,7 @@
                     </ul>
                 </li>
             </ul>
-            <a class="butContato" href="#entreContato">Entre em contato</a>
+            <a class="butContato" href="#entreContato">Entre em contato <span class="material-icons" style="font-size: 1.3rem;">call</span></a>
         </div>
     </header>
 
@@ -274,7 +275,7 @@
                         <div class="wrapImg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQP4bSNzcar-720lqhBKt0_R3utbTFTzLU3gseI5OOoZK89dWpTgWNukqa8bMqi7sKBmQ&usqp=CAU" class="card-img-top" alt="microfone" id="imgProduto"></div>
                         <div class="card-body">
                             <h5 class="card-title">Microfone Gamer</h5>
-                            <p class="card-text">290.00</p>
+                            <p class="card-text">690.00</p>
                             <button href="#" class="btn btn-info" onclick="irCarrinho('Microfone Gamer', 690)">Adicionar ao carrinho</button>
                         </div>
                     </div>
@@ -315,7 +316,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Mouse com fio estilizado</h5>
                             <p class="card-text">R$: 120.80</p>
-                            <button href="#" class="btn btn-info" onclick="irCarrinho('Mouse com fio estilazado', 120.8)">Adicionar ao carrinho</button>
+                            <button href="#" class="btn btn-info" onclick="irCarrinho('Mouse com fio estilizado', 120.8)">Adicionar ao carrinho</button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -339,6 +340,7 @@
 
             <div id="entreContato">
                 <p style="font-size: 1.6rem; font-weight: 700;">Entre em contato</p>
+                <p style="font-size: 1.2rem; font-weight: 500;">Aqui você pode me mandar mensagens.</p>
                 <div class="mb-3" id="contatoDiv">
                     <label for="exampleFormControlInput1" class="form-label">Nome</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Seu nome">

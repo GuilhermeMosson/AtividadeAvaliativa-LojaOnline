@@ -42,11 +42,12 @@ function enviarWats(){
 
     mensagem += `${total} | Pedido feito em ${dt}`;
         
-    var numeroTel = "5541999999999"; /*Lembrar de colocar o nº certo*/
+    var numeroTel = "5541987419203"; /*Lembrar de colocar o nº certo*/
     var linkWhatsApp = "https://wa.me/" + numeroTel + "?text=" + "Pedido de " + nome + ": " + mensagem + " | Será entregue em " + endereco;
     window.open(linkWhatsApp, "_blank");/*Abre o zap em outra janela*/;
 
     document.getElementById('idInput').style.display='none';
+    limpar();
 }
 
 function fechar(){
